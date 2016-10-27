@@ -1,0 +1,29 @@
+{
+	"levelOne":[
+	{
+		"name":"Strongman",
+		"tomatoes":[
+		"interrogation 1", 
+		"interrogation 2", 
+		"interrogation 3"
+		],
+		"irrelevant":[
+		"fruits",
+		"boots",
+		"life"
+		]
+	},
+	{
+		"name":"Clown",
+		"sunny":[
+		"consectetur adipiscing elit, sed do eiusmod",
+		"tempor incididunt ut labore et dolore magna aliqua.",
+		"Ut enim ad minim veniam, quis nostrud"
+		],
+		"irrelevant":[
+		"dark",
+		"potatoes",
+		"orange juice"]
+	}
+	]
+}

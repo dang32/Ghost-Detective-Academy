@@ -42,7 +42,8 @@ public class ViewSwitch : MonoBehaviour {
 
        
             charMovement.frozen = zoomed;
-            clownEyes.zoomed = zoomed;
+        if(clownEyes!= null)
+        clownEyes.zoomed = zoomed;
         
 
         //switch between zoomed and overhead by pressing space

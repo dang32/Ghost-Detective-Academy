@@ -39,12 +39,13 @@ public class Eyes : MonoBehaviour {
 
     public float minYmicro;
     public float maxYmicro;
+    public int eyeMatIndex;
     // Use this for initialization
     void Start () {
         //Material[] allMats;
         //allMats = 
         
-        mat = GetComponent<Renderer>().materials[5];
+        mat = GetComponent<Renderer>().materials[eyeMatIndex];
 	}
 	
 	// Update is called once per frame
@@ -99,7 +100,7 @@ public class Eyes : MonoBehaviour {
                 }
             }
         }
-        GetComponent<Renderer>().materials[5] = mat;
+        GetComponent<Renderer>().materials[eyeMatIndex] = mat;
         
     }
 

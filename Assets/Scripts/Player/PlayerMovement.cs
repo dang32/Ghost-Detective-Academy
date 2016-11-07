@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetAxis("Vertical") + " " + Input.GetAxis("Horizontal"));
+     //   Debug.Log(Input.GetAxis("Vertical") + " " + Input.GetAxis("Horizontal"));
         rigi.velocity = Vector3.zero;
         if (!frozen)
         {
@@ -27,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.forward = new Vector3(-Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));
             }
+        }
+        if(Input.GetKeyDown(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

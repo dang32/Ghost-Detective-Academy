@@ -1,0 +1,90 @@
+{
+	"levelOne":[
+	{
+		"name":"strongman",
+		"start":"What do you want to ask me about?",
+		"contra":[
+		{
+			"tomatoes":[
+			"interrogation 1", 
+			"interrogation 2", 
+			"interrogation 3"
+			]
+		}
+		],
+		"chain_text":[
+		{
+			"keys":[
+			"qui dolorem ipsum quia dolor sit amet, consectetur",
+			"adipisci velit, sed quia non numquam eius modi tempora",
+			"incidunt ut labore et dolore magnam aliquam quaerat voluptatem"
+			]
+		},
+		{
+			"bottle":[
+			"Ut enim ad minima veniam",
+			"quis nostrum exercitationem",
+			"ullam corporis suscipit laboriosam"
+			]
+		}
+		],
+		"chains":["keys","bottle"],
+		"flavor":[
+			{
+				"Morning":[
+				"Wayne: Ah, yes. I love mornings. I’m quite the early bird. I get up at 5am every day!"
+				],
+				"Glory Days":[
+				"Wayne: The Civil Right’s movement. Those were my glory days. I only wish Blaise had been along to see it."
+				]
+			}
+		],
+		"default":"What? Why are you bothering me with nonsense?"
+	},
+	{
+		"name":"clown",
+		"start":"A question? For a clown?",
+		"contra":[
+		{
+			"Morning":[
+			"Boolean: You said something funny earlier.",
+			"Mac Ronald: Of course I did. I’m a clown.",
+			"Boolean: That’s not what I meant.",
+			"Mac Ronald: Well then choose your words more carefully! Gahahah!",
+			"Boolean: Anyway, you said you knew that you were outside cleaning your props because, and I quote, \"there was a full moon out\".",
+			"Mac Ronald: Yeah, so?",
+			"Boolean: The murder happened early in the morning.",
+			"Mac Ronald: Wow. You got me. You’re just as amazing as they say.",
+			"Boolean: Cut it with the attitude, and tell me why you lied.",
+			"Mac Ronald: Lied? Can’t an old clown have a lapse in memory?",
+			"Boolean: Where were you at the time of the murder?",
+			"Mac Ronald: At the prop closet, like I said.",
+			"Mac Ronald: I noticed the sword swallower’s props were missing, so I went towards the practice tent to see if she’d left them there, but when I got there it was already on fire."
+			]
+		}],
+		"chains":["crap", "duck"],
+		"chain_text":[
+		{
+			"crap":[
+			"nisi ut aliquid ex ea commodi",
+			"Quis autem vel eum iure",
+			"reprehenderit qui in ea"
+			],
+			"duck":[
+			"voluptate velit esse cillum",
+			"dolore eu fugiat nulla pariatur"
+			]
+		}
+		],
+		"flavor":[
+		{
+			"Glory Days": [
+				"Mac Ronald: The early circus days were the best days of my life. O’Glory was the business expert, and I was entertainment expert. But that meant,as time went on, I was stuck as the clown.",
+				"Mac Ronald: And then the Strongman came along, always strong arming people. I own half the circus, but no one ever listens to me. No one ever listens to the clown!"
+				]
+		}
+		],
+		"default":"Man, I don't know what you're talking about. Let me mope in peace."
+	}
+	]
+}

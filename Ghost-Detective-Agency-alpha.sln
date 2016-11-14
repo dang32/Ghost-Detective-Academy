@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghost-Detective-Agency-alpha.CSharp", "Ghost-Detective-Agency-alpha.CSharp.csproj", "{6DB9D31F-079B-E138-088A-05265BC9DDD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghost-Detective-Agency-alpha.CSharp.Editor", "Ghost-Detective-Agency-alpha.CSharp.Editor.csproj", "{5CC1657A-B167-6C11-8653-915CAD7BAADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DB9D31F-079B-E138-088A-05265BC9DDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB9D31F-079B-E138-088A-05265BC9DDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB9D31F-079B-E138-088A-05265BC9DDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB9D31F-079B-E138-088A-05265BC9DDD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC1657A-B167-6C11-8653-915CAD7BAADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC1657A-B167-6C11-8653-915CAD7BAADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC1657A-B167-6C11-8653-915CAD7BAADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC1657A-B167-6C11-8653-915CAD7BAADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

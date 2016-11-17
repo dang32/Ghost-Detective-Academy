@@ -159,9 +159,9 @@
     <Compile Include="Assets\first playable\Standard Assets V2\Effects\LensAberrations\LensAberrations.cs" />
     <Compile Include="Assets\first playable\Standard Assets V2\Effects\ScreenSpaceReflection\ScreenSpaceReflection.cs" />
     <Compile Include="Assets\first playable\Standard Assets V2\Effects\TonemappingColorGrading\TonemappingColorGrading.cs" />
-    <Compile Include="Assets\first playable\clown\Eyes.cs" />
-    <Compile Include="Assets\first playable\clown\SmoothMouseLook.cs" />
-    <Compile Include="Assets\first playable\clown\mainCharacterMovement.cs" />
+    <Compile Include="Assets\first playable\characters\clown\Eyes.cs" />
+    <Compile Include="Assets\first playable\characters\clown\SmoothMouseLook.cs" />
+    <Compile Include="Assets\first playable\characters\clown\mainCharacterMovement.cs" />
     <Compile Include="Assets\first playable\scripts\Bobbing.cs" />
     <Compile Include="Assets\first playable\scripts\ViewSwitch.cs" />
     <Compile Include="Assets\loadSceneOnTrigger.cs" />
@@ -263,8 +263,8 @@
     <None Include="Assets\first playable\Standard Assets V2\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\first playable\Standard Assets V2\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\first playable\Standard Assets V2\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
-    <None Include="Assets\first playable\clown\Cutout.shader" />
-    <None Include="Assets\first playable\clown\Unlit.shader" />
+    <None Include="Assets\first playable\characters\clown\Cutout.shader" />
+    <None Include="Assets\first playable\characters\clown\Unlit.shader" />
     <None Include="Assets\first playable\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

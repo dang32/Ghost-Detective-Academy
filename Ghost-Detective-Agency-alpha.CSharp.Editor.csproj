@@ -232,8 +232,8 @@
     <None Include="Assets\first playable\Standard Assets V2\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\first playable\Standard Assets V2\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\first playable\Standard Assets V2\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
-    <None Include="Assets\first playable\clown\Cutout.shader" />
-    <None Include="Assets\first playable\clown\Unlit.shader" />
+    <None Include="Assets\first playable\characters\clown\Cutout.shader" />
+    <None Include="Assets\first playable\characters\clown\Unlit.shader" />
     <None Include="Assets\first playable\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

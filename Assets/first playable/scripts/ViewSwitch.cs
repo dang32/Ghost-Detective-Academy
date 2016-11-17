@@ -90,6 +90,7 @@ public class ViewSwitch : MonoBehaviour {
 
     public IEnumerator Zoom()
     {
+        zoomed = true;
         charMovement.frozen = true;
   //      playerStartPos = player.position;
   //      playerStartRot = player.rotation;
@@ -123,7 +124,7 @@ public class ViewSwitch : MonoBehaviour {
   //      playerStartRot = player.rotation;
         while (elapsedTime < transitionTime)
         {
-
+            zoomed = false;
             Vector3 startPos = Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0);
             //player.position = Vector3.Slerp( playerTalkingTrans.position, playerStartPos, elapsedTime / transitionTime);
             //player.rotation = Quaternion.Slerp(playerTalkingTrans.rotation, playerStartRot, elapsedTime / transitionTime);

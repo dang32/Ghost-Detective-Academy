@@ -40,11 +40,12 @@ public class TextBoxManager : MonoBehaviour {
 	private bool listenClick;
 	private bool questionClick;
 	public bool isChain;
-    public int placeInChain; //0 means they haven't started
+    public int placeInChain; 
     public GameObject arrow;
     public bool initalPlayerInput;
     public GameObject noteButton;
     public CanvasGroup noteButtons;
+    public int currentLevel;
     void Start()
     {
         cameraZoom = FindObjectOfType<ViewSwitch>();
@@ -163,7 +164,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public void onListenClick() {
 
-
+        Debug.Log(listenJson.Count+" "+npcName);
         //scan json and add speaking lines to textLines list
         for (int i = 0; i < listenJson.Count; i++)
     	{
@@ -228,7 +229,7 @@ public class TextBoxManager : MonoBehaviour {
                 //go through each contradiction word and see if the played is in a far enough chain for it to activate
                 foreach (KeyValuePair<string, List<string> > contraWord in questionJson[i].contra)
                 {
-                    //placeInChain==0 once they click the first word
+                    //placeInChain==1 after they click the first word
                     Debug.Log(contraWord.Key + " == " + word + " " + contraDictIndex+" " + placeInChain);
                     if (contraWord.Key == word && contraDictIndex == placeInChain)
                     {
@@ -240,6 +241,12 @@ public class TextBoxManager : MonoBehaviour {
                         }
                     }
                     contraDictIndex++;
+                }
+
+                //number of contradictory words == the place in the contradiction chain
+                if(questionJson[i].contra.Count==placeInChain)
+                {
+                    Debug.Log("THAT'S NEXT LEVEL!");
                 }
 
                 if (questionLines.Count == 0)

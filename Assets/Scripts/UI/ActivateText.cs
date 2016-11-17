@@ -30,6 +30,7 @@ public class ActivateText : MonoBehaviour {
             Debug.Log("here");
             textManager.EnableTextBox();
             textManager.npcName = transform.name;
+            Debug.Log("activate text npcname "+transform.name);
             cameraSwitcher.isTalking = true;
             dialogueBoxes.SetActive(true);
             listen.SetActive(true);

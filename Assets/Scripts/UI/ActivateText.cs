@@ -16,7 +16,14 @@ public class ActivateText : MonoBehaviour {
 		player = FindObjectOfType<PlayerMovement>();
 		playerHistory = FindObjectOfType<PlayerHistory>();
 		cameraSwitcher = FindObjectOfType<ViewSwitch>();
-	}
+        dialogueBoxes = GameObject.Find("UICanvas").transform.GetChild(2).gameObject;
+        listen = GameObject.Find("UICanvas").transform.GetChild(2).GetChild(1).gameObject;
+        question = GameObject.Find("UICanvas").transform.GetChild(2).GetChild(2).gameObject;
+        text = listen = GameObject.Find("UICanvas").transform.GetChild(2).GetChild(0).gameObject;
+
+        textManager = GameObject.Find("TextBoxManager").GetComponent<TextBoxManager>();
+
+    }
 
 	// Update is called once per frame
 	void Update () {

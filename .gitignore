@@ -1,8 +1,12 @@
 # Unity generated and a few customs #
 # ================================= #
+Alpha/*
+Assets/*
+exported packages/*
 Temp/*
 Library/*
 Build/*
+builds/*
 Obj/*
 WebBuild/*
 WindowsBuild/*

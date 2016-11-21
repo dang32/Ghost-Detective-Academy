@@ -5,11 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/outdoor.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/first playable/scenes/clown.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/first playable/scenes/strongman.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/first playable/scenes/sword swallower.unity
+  - enabled: 1
+    path: Assets/Scenes/outdoor.unity
+  - enabled: 1
+    path: Assets/Scenes/clown.unity
+  - enabled: 1
+    path: Assets/Scenes/strongman.unity
+  - enabled: 1
+    path: Assets/Scenes/sword swallower.unity

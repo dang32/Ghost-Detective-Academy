@@ -28,10 +28,16 @@ public class EvidenceSparkle : MonoBehaviour {
     public void EnableSparkle()
     {
         transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
+
     }
 
     public void DisableSparkle()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Stop();
+        transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+        transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().playbackSpeed = 4f;
+        transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().gravityModifier = -.018f;
+
     }
 }

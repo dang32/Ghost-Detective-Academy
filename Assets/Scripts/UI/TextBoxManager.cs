@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine.UI;
 using LitJson;
+using UnityEngine.SceneManagement;
 
 public class TextBoxManager : MonoBehaviour {
     public ViewSwitch cameraZoom;
@@ -46,6 +47,8 @@ public class TextBoxManager : MonoBehaviour {
     public GameObject noteButton;
     public CanvasGroup noteButtons;
     public int currentLevel;
+    public GameObject exclamationMark;
+    int currentScene;
     void Start()
     {
         cameraZoom = FindObjectOfType<ViewSwitch>();
@@ -65,7 +68,11 @@ public class TextBoxManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        if(currentScene!=SceneManager.GetActiveScene().buildIndex)
+        {
+            NewSceneLoaded();
+        }
+        currentScene = SceneManager.GetActiveScene().buildIndex;
         //sets next arrow in ui based on wether there's another line
         if (currentLine <= endAtLine)
             arrow.SetActive(true);
@@ -73,6 +80,7 @@ public class TextBoxManager : MonoBehaviour {
             arrow.SetActive(false);
             if (questionClick)
                 wordBank.EnableWordBank();
+            exclamationMark.SetActive(false);
         }
 
         //changes next arrow to back arrow
@@ -233,6 +241,7 @@ public class TextBoxManager : MonoBehaviour {
                     Debug.Log(contraWord.Key + " == " + word + " " + contraDictIndex+" " + placeInChain);
                     if (contraWord.Key == word && contraDictIndex == placeInChain)
                     {
+                        exclamationMark.SetActive(true);
                         placeInChain++;
                         questionJson[i].contra.TryGetValue(word, out text);
                         for (int j = 0; j < text.Count; j++)
@@ -263,6 +272,8 @@ public class TextBoxManager : MonoBehaviour {
                     {
                         placeInChain = 0;
                         questionLines.Add(questionJson[i].defaultText);
+                        exclamationMark.SetActive(false);
+
                     }
                 }
 			}
@@ -313,5 +324,13 @@ public class TextBoxManager : MonoBehaviour {
         noteButtons.interactable = false;
         arrow.transform.GetChild(0).GetComponent<Text>().text = "→";
 
+    }
+
+    public void NewSceneLoaded()
+    {
+        cameraZoom = FindObjectOfType<ViewSwitch>();
+        playerHistory = FindObjectOfType<PlayerHistory>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement.frozen = false;
     }
 }

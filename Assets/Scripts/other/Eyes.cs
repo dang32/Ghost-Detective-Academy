@@ -100,6 +100,10 @@ public class Eyes : MonoBehaviour {
                 }
             }
         }
+        else
+        {
+            mat.SetTextureOffset("_MainTexB", new Vector2(0f, 0f));
+        }
         GetComponent<Renderer>().materials[eyeMatIndex] = mat;
         
     }

@@ -77,9 +77,9 @@ public class EvidenceManager : MonoBehaviour
                     sparkle.GetComponent<EvidenceSparkle>().EnableSparkle();
 
                 }
-                else
-                {
-                    sparkle.GetComponent<EvidenceSparkle>().DisableSparkle();
+                    else
+                    {
+                        //sparkle.GetComponent<EvidenceSparkle>().DisableSparkle();
                 }
             }
             else if (sparkles[evidenceIndex] != 0)

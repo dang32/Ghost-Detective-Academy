@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class ListNotePad : MonoBehaviour {
 
 	public PlayerHistory playerHistory;
@@ -14,18 +14,25 @@ public class ListNotePad : MonoBehaviour {
 	private List<string> created = new List<string>();
     Navigation customNav;
     public List<string> notePad = new List<string>();
-
+    int currentScene;
 	// Use this for initialization
 	void Start () {
         playerHistory = FindObjectOfType<PlayerHistory>();
         notePadPanel = GameObject.Find("NotePanel");
         customNav = new Navigation();
         customNav.mode= Navigation.Mode.None;
+       
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (wordManager.wordBankActive == true) {
+        if(currentScene!=SceneManager.GetActiveScene().buildIndex)
+        {
+            playerHistory = FindObjectOfType<PlayerHistory>();
+        }
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        if (wordManager.wordBankActive == true) {
 			notePad = playerHistory.wordList;
 			for (int i = 0; i < notePad.Count; i++)
 			{

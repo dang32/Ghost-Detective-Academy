@@ -66,7 +66,7 @@
       "default": "Mac Ronald: Man, I don't know what you're talking about. Let me mope in peace."
     },
 
-     {
+    {
       "name": "sword swallower",
       "start": "What do you want to ask about?",
       "contra": [
@@ -79,10 +79,47 @@
           "Morning": [
             "Amber: Yeah, I was practicing just this morning before everything happened"
           ]
-         
+
         }
       ],
       "default": "Amber: I don't know what you're talking about. Let me swallow swords in peace."
+    },
+
+
+
+         {
+      "name": "ven",
+      "start": "What do you want to ask about?",
+      "contra": [
+        {
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Marionetta: I’m not really a morning person."
+          ],
+
+          "Glory Days": [
+            "Marionetta: My days with O’Glory were admittedly… not the best."
+          ],
+
+          "Intense Chemistry": [
+            "Marionetta: Gross."
+          ],
+
+          "Artistic Differences": [
+            "Marionetta: O’Glory banned any jokes about him from my bit, but I’m the one with the ego."
+          ],
+
+          "Father": [
+            "Marionetta: I don’t like to talk about him. The way I see it, I never had one. Mr. Ronald is the closest thing I’ve ever had to a father."
+          ]
+         
+        }
+      ],
+          "default": "Marionetta: I don't know what you're talking about, dummy"
     }
 	]
 }

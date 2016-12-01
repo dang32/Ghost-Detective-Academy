@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
      //   Debug.Log(Input.GetAxis("Vertical") + " " + Input.GetAxis("Horizontal"));
         rigi.velocity = Vector3.zero;

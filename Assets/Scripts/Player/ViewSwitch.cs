@@ -29,8 +29,11 @@ public class ViewSwitch : MonoBehaviour {
     public TextBoxManager textBoxMana;
     public Light faceLight;
     public bool outside;
+    Rigidbody rigi;
+    Vector3 direction;
     // Use this for initialization
     void Start () {
+        rigi = GetComponent<Rigidbody>();
         cam = GetComponent<Camera>();
 
         charMovement = GameObject.Find("main char").GetComponent<PlayerMovement>();
@@ -56,7 +59,7 @@ public class ViewSwitch : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
 
        
         if(clownEyes!= null)
@@ -91,14 +94,32 @@ public class ViewSwitch : MonoBehaviour {
             transitioning = false;
 
         }
-
-        if (cam.fieldOfView> fovStart-1)
+        rigi.velocity = Vector3.zero;
+        if (cam.fieldOfView> fovStart-4)
         {
+            
+            rigi.position = Vector3.Lerp(
+                            rigi.position,
+                            Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0),
+                            Time.deltaTime * 12);
+                            
+           
             //makes camera follow player if it could move
+            /*
             transform.position = Vector3.Lerp(
                 transform.position,
                 Vector3.Scale(player.position+offsetFromPlayer,new Vector3(1,0,1))+new Vector3(0,camHeight,0),
                 Time.deltaTime*12);
+                */
+            // rigi.AddForce((Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0))- (transform.position));
+            //direction = ((Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0)) - transform.position).normalized;
+            // rigi.MovePosition(rigi.position + direction * 3f * Time.deltaTime);
+            /*
+            rigi.MovePosition(Vector3.Lerp(
+                  rigi.position,
+                  Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0),
+                  Time.deltaTime * 12));
+                  */
         }
 
     }

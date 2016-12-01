@@ -38,6 +38,6 @@ public class EvidenceSparkle : MonoBehaviour {
         transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
         transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().playbackSpeed = 4f;
         transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().gravityModifier = -.018f;
-
+        GetComponent<BoxCollider>().enabled = false;
     }
 }

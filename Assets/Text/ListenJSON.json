@@ -54,22 +54,56 @@
     },
 
     {
-		"name":"sword swallower",
-		"start":"Amber: Detective Boolean, as I live and breathe.",
+      "name": "sword swallower",
+      "start": "Amber: Detective Boolean, as I live and breathe.",
+      "dialogue": [
+        "Boolean: Hello, can you please state your name for the record?",
+        "Amber: My pleasure, darling. I am Amber Saberlade, Sword Swallower and Fire Breathing Extraordinaire!",
+        "Boolean: Thank you, Ms. Saberblade.",
+        "Amber: Oh, you can call me Amber.",
+        "Boolean: Thank you, Ms. Saberblade. Can you please tell us your relationship with the victim?",
+        "Amber: Oh, of course, darling. Blaise and I were passionate lovers.",
+        "Boolean: Really?",
+        "Amber: Well... we would have been, if he weren’t so terribly shy. Poor thing was always lousy around women. Ya know I always see him practicing his flirtations with Wayne Jackson? They have dinner every night. Even gave him a rose once. But anyone could see there was an intense chemistry between us.",
+        "Boolean: Okay, where were you at the time of the murder?",
+        "Amber: In my tent, sleeping, darling. A woman needs her beauty sleep, after all. Well, at least until I heard the horrible screaming. No one’s up that early except for Wayne, Mac, and dear old Blaise. I heard Wayne was the one to find him. Poor thing left the circus over it. "
+      ],
+      "wordBank": [
+        "Intense Chemistry"
+      ],
+      "color": "red",
+      "speed": "1"
+    }, 
+        {
+		"name":"ven",
+		"start":"Marionetta: So I hear you’re quite the detective.",
 		"dialogue":[
-		"Boolean: Hello, can you please state your name for the record?",
-		"Amber: My pleasure, darling. I am Amber Saberlade, Sword Swallower and Fire Breathing Extraordinaire!",
-		"Boolean: Thank you, Ms. Saberblade.",
-		"Amber: Oh, you can call me Amber.",
-		"Boolean: Thank you, Ms. Saberblade. Can you please tell us your relationship with the victim?",
-		"Amber: Oh, of course, darling. Blaise and I were passionate lovers.",
-		"Boolean: Really?",
-		"Amber: Well... we would have been, if he weren’t so terribly shy. Poor thing was always lousy around women. Ya know I always see him practicing his flirtations with Wayne Jackson? They have dinner every night. Even gave him a rose once. But anyone could see there was an intense chemistry between us.",
-		"Boolean: Okay, where were you at the time of the murder?",
-		"Amber: In my tent, sleeping, darling. A woman needs her beauty sleep, after all. Well, at least until I heard the horrible screaming. No one’s up that early except for Wayne, Mac, and dear old Blaise. I heard Wayne was the one to find him. Poor thing left the circus over it. "
-		],
+		"Boolean: May I have your name?",
+		"Marionetta: It’s Marionetta.",
+		"Boolean: And your last name?",
+		"Marionetta: Don’t have one. Or well, eventually I get one. I marry. But back then, when I was a girl, it was just Marionetta the Ventriloquist.",
+		"Boolean: I see. I hear you’re a new arrival. Welcome to the Ghost Realm.",
+		"Marionetta: I am. Thank you.",
+		"Boolean: I’d like to ask you a few questions. We’ve been missing your testimony for quite some time.",
+		"Marionetta; Whatever I can do to help.",
+		"Boolean: Thank you very much. Can you tell us your relationship with the victim?",
+		"Marionetta: I found the circus when I was 16. I was a runaway. Mr. Ronald took me in. Let me use his old dummy. As for O’Glory I...was not a fan of the man.",
+		"Boolean: Why?",
+		"Marionetta: He didn’t want me to be part of the circus. I wasn’t like his Trapeze twins. I had no family, no skills. And when I did join… we had <color=red> <size=16>artistic differences</size></color>.",
+		"Boolean: Where were you at the time of the murder, Marionetta?",
+		"Marionetta: I was on my way to my tent. I’d just got done talking to O’Glory.",
+		"Boolean: You spoke to Mr. O’Glory?",
+		"Marionetta: I did.",
+		"Boolean: And you were on your way to your tent from where?",
+		"Marionetta: The practice tent.",
+		"Boolean: The crime scene. ",
+		"Marionetta: I know how it looks.",
+		"Boolean: What did you two talk about?",
+		"Marionetta: My dummy. I’d gotten in trouble two weeks before because it went missing. I’d found it the night before and it had been damaged. I couldn’t get its mouth to open.",
+		"Boolean: Thank you, Marionetta."
+    ],
 		"wordBank": [
-		"Intense Chemistry"
+		"Artistic Differences"
     ],
 		"color":"red",
 		"speed":"1"

@@ -11,7 +11,7 @@ public class EvidenceManager : MonoBehaviour
     public GameObject[] evidenceImages;
     public int totalEvidenceFound;
     public static EvidenceManager instance = null;//Static instance of GameManager which allows it to be accessed by any other script.
-
+    public EvidenceText text;
 
     //every sparkles has it's own script with an index saying which piece of evidence it is
     //when someone walks into it, this script is given the index and it enables the piece of evidence ui matched with it (by indices)
@@ -109,6 +109,7 @@ public class EvidenceManager : MonoBehaviour
     //when somenone walks into evidence
     public void FoundEvidence(int evidenceIndex)
     {
+        text.StartCoroutine("Appear", evidenceIndex);
         sparkles[evidenceIndex] = -1;
         totalEvidenceFound++;
         evidenceImages[evidenceIndex].SetActive(true);

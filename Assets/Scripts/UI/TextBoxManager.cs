@@ -49,6 +49,7 @@ public class TextBoxManager : MonoBehaviour {
     public int currentLevel;
     public GameObject exclamationMark;
     int currentScene;
+    public NextLevelText nextLevelText;
     void Start()
     {
         cameraZoom = FindObjectOfType<ViewSwitch>();
@@ -256,6 +257,7 @@ public class TextBoxManager : MonoBehaviour {
                 if(questionJson[i].contra.Count==placeInChain)
                 {
                     Debug.Log("THAT'S NEXT LEVEL!");
+                    nextLevelText.StartCoroutine("Appear");
                 }
 
                 if (questionLines.Count == 0)

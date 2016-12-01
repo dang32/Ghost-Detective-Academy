@@ -1,16 +1,20 @@
-# =============== #
-# Unity generated #
-# =============== #
-Temp/
-Obj/
-UnityGenerated/
-Library/
-Assets/AssetStoreTools*
+# Unity generated and a few customs #
+# ================================= #
+Alpha/*
+Assets/*
+exported packages/*
+Temp/*
+Library/*
+Build/*
+builds/*
+Obj/*
+WebBuild/*
+WindowsBuild/*
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-ExportedObj/
+ExportedObj/*
 *.svd
 *.userprefs
 *.csproj
@@ -20,6 +24,14 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
+*.log
+# Ignore UnityVS so users can use different versions
+Assets/UnityVS/*
+
+#ignoring pidb, they are just code completion caching data according to:
+# http://stackoverflow.com/questions/1022111/what-are-monodevelops-pidb-files
+*.pidb
+*.userprefs
 
 # ============ #
 # OS generated #

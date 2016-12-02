@@ -1,0 +1,56 @@
+{
+	"levelOne":[
+	{
+		"name":"strongman",
+		"start":"Wayne: Hello, Detective.",
+		"dialogue": [
+		"Boolean: Hello. For the record, please state your name.", 
+		"Wayne: Of course, my boy. I am Wayne \"The Stone\" Jackson: The Spectacular Strongman!",
+		"Boolean: Thank you... Wayne? The Stone? Sir?",
+		"Wayne: Any will do. Detective, I just wanted to say I’m very grateful that you’re still looking into this. It’s still quite painful that it happened. That it was one of our own. So, thank you.",
+		"Boolean: Just doing my job.",
+		"Wayne: Of course. How can I help you, Detective?",
+		"Boolean: I just need you to answer a couple of questions. Again. What was your relationship with the victim?",
+		"Wayne: Blaise was my boyfriend and business partner. He brought me on to help with the circus’s business strategy a few months before his death.",
+		"Boolean: And where were you at the time of the murder?",
+		"Wayne: I was on my way to the practice tent. I always go there early in the <color=red> <size=16>morning</size></color> to rehearse.",
+		"Boolean: You mean the place where the murder occurred.",
+		"Wayne: Yes.",
+		"Boolean: You see how that might look suspicious.",
+		"Wayne: I do, Detective, but I didn’t get there until after Blaise was already dead. I was the one to call the police, my boy."
+		],
+		"wordBank": [
+		"Morning"
+		],
+		"color":"blue",
+		"speed":"1"
+	},
+	{
+		"name":"clown",
+		"start":"Mac Ronald: Oh, it’s you.",
+		"dialogue":[
+		"Boolean: For the record, please state your name and occupation.",
+		"Mac Ronald: The name’s Mac! Mac Ronald the Clown! Gahahah!",
+		"Boolean: Thank you, Mac. Now what was your relationship…..",
+		"Mac Ronald: That’s Mr. Ronald to you….Boolean!",
+		"Boolean: Fine, but I expect you to call me Detective from now on.",
+		"Mac Ronald: What kind of detective can’t even figure out my occupation? Look at me! Gahahah!",
+		"Boolean: It was for the record.",
+		"Mac Ronald: I’ll start calling you detective once you figure out who killed Blaise, you hack.",
+		"Boolean: Answer my questions and maybe I would, you Emmett Kelly knock off.",
+		"Mac Ronald: Bahh, I was a clown before he was red around the nose.",
+		"Boolean: Now let’s try again. What was your relationship with the victim?",
+		"Mac Ronald: If you must know we started the circus together as clowns. We were best friends! Now those were the <color=red> <size=16>glory days</size></color> ….errr… the Glory and Ronald days. Gahahah!",
+		"Boolean: I see. So where were you at the time of the murder?",
+		"Mac Ronald: You couldn’t possibly suspect me, I’d never kill him.",
+		"Boolean: Well, you’re not here to make me a balloon animal, so tell me what you know.",
+		"Mac Ronald: Fine, just for your ‘record’ I was outside cleaning up some of my props, I know ‘cuz  there was a full moon out. Can’t forget something like that! Gahahah!"
+		],
+		"wordBank": [
+		"Glory Days"
+		],
+		"color":"red",
+		"speed":"1"
+	}
+	]
+}

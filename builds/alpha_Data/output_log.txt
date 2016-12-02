@@ -1,0 +1,211 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\LitJson.dll into Unity Child Domain
+- Completed reload, in  0.059 seconds
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Acer\Desktop\Ghost-Detective-Agency-alpha\builds\alpha_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.062683 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 328c -> priority: 1 
+  Thread -> id: 34fc -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.410611 ms
+
+Unloading 63 unused Assets to reduce memory usage. Loaded Objects now: 796.
+Total: 2.079970 ms (FindLiveObjects: 0.045396 ms CreateObjectMapping: 0.037107 ms MarkObjects: 0.483576 ms  DeleteObjects: 1.512705 ms)
+
+here
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+enabled text box
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+activate text npcname clown
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+3 clown
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: For the record, please state your name and occupation.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: The name’s Mac! Mac Ronald the Clown! Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Thank you, Mac. Now what was your relationship…..
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: That’s Mr. Ronald to you….Boolean!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Fine, but I expect you to call me Detective from now on.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: What kind of detective can’t even figure out my occupation? Look at me! Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: It was for the record.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: I’ll start calling you detective once you figure out who killed Blaise, you hack.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Answer my questions and maybe I would, you Emmett Kelly knock off.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: Bahh, I was a clown before he was red around the nose.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Now let’s try again. What was your relationship with the victim?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: If you must know we started the circus together as clowns. We were best friends! Now those were the <color=red> <size=16>glory days</size></color> ….errr… the Glory and Ronald days. Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: I see. So where were you at the time of the murder?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: You couldn’t possibly suspect me, I’d never kill him.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Well, you’re not here to make me a balloon animal, so tell me what you know.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: Fine, just for your ‘record’ I was outside cleaning up some of my props, I know ‘cuz  there was a full moon out. Can’t forget something like that! Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+3 clown
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: For the record, please state your name and occupation.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: The name’s Mac! Mac Ronald the Clown! Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Thank you, Mac. Now what was your relationship…..
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: That’s Mr. Ronald to you….Boolean!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Fine, but I expect you to call me Detective from now on.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: What kind of detective can’t even figure out my occupation? Look at me! Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: It was for the record.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: I’ll start calling you detective once you figure out who killed Blaise, you hack.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Answer my questions and maybe I would, you Emmett Kelly knock off.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: Bahh, I was a clown before he was red around the nose.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Now let’s try again. What was your relationship with the victim?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: If you must know we started the circus together as clowns. We were best friends! Now those were the <color=red> <size=16>glory days</size></color> ….errr… the Glory and Ronald days. Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: I see. So where were you at the time of the murder?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: You couldn’t possibly suspect me, I’d never kill him.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Boolean: Well, you’re not here to make me a balloon animal, so tell me what you know.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Mac Ronald: Fine, just for your ‘record’ I was outside cleaning up some of my props, I know ‘cuz  there was a full moon out. Can’t forget something like that! Gahahah!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Glory Days
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Morning == Glory Days 0 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Morning #2 == Glory Days 1 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Morning #3 == Glory Days 2 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Morning #4 == Glory Days 3 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+

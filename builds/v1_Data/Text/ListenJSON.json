@@ -1,0 +1,112 @@
+{
+	"levelOne":[
+	{
+		"name":"strongman",
+		"start":"Wayne: Hello, Detective.",
+		"dialogue": [
+		"Boolean: Hello. For the record, please state your name.", 
+		"Wayne: Of course, my boy. I am Wayne \"The Stone\" Jackson: The Spectacular Strongman!",
+		"Boolean: Thank you... Wayne? The Stone? Sir?",
+		"Wayne: Any will do. Detective, I just wanted to say I’m very grateful that you’re still looking into this. It’s still quite painful that it happened. That it was one of our own. So, thank you.",
+		"Boolean: Just doing my job.",
+		"Wayne: Of course. How can I help you, Detective?",
+		"Boolean: I just need you to answer a couple of questions. Again. What was your relationship with the victim?",
+		"Wayne: Blaise was my boyfriend and business partner. He brought me on to help with the circus’s business strategy a few months before his death.",
+		"Boolean: And where were you at the time of the murder?",
+		"Wayne: I was on my way to the practice tent. I always go there early in the <color=red> <size=16>morning</size></color> to rehearse.",
+		"Boolean: You mean the place where the murder occurred.",
+		"Wayne: Yes.",
+		"Boolean: You see how that might look suspicious.",
+		"Wayne: I do, Detective, but I didn’t get there until after Blaise was already dead. I was the one to call the police, my boy."
+		],
+		"wordBank": [
+		"Morning"
+    ],
+		"color":"blue",
+		"speed":"1"
+	},
+    {
+      "name": "clown",
+      "start": "Mac Ronald: Oh, it’s you.",
+      "dialogue": [
+        "Boolean: For the record, please state your name and occupation.",
+        "Mac Ronald: The name’s Mac! Mac Ronald the Clown! Gahahah!",
+        "Boolean: Thank you, Mac. Now what was your relationship…..",
+        "Mac Ronald: That’s Mr. Ronald to you….Boolean!",
+        "Boolean: Fine, but I expect you to call me Detective from now on.",
+        "Mac Ronald: What kind of detective can’t even figure out my occupation? Look at me! Gahahah!",
+        "Boolean: It was for the record.",
+        "Mac Ronald: I’ll start calling you detective once you figure out who killed Blaise, you hack.",
+        "Boolean: Answer my questions and maybe I would, you Emmett Kelly knock off.",
+        "Mac Ronald: Bahh, I was a clown before he was red around the nose.",
+        "Boolean: Now let’s try again. What was your relationship with the victim?",
+        "Mac Ronald: If you must know we started the circus together as clowns. We were best friends! Now those were the <color=red> <size=16>glory days</size></color> ….errr… the Glory and Ronald days. Gahahah!",
+        "Boolean: I see. So where were you at the time of the murder?",
+        "Mac Ronald: You couldn’t possibly suspect me, I’d never kill him.",
+        "Boolean: Well, you’re not here to make me a balloon animal, so tell me what you know.",
+        "Mac Ronald: Fine, just for your ‘record’ I was outside cleaning up some of my props, I know ‘cuz  there was a full moon out. Can’t forget something like that! Gahahah!"
+      ],
+      "wordBank": [
+        "Glory Days"
+      ],
+      "color": "red",
+      "speed": "1"
+    },
+
+    {
+      "name": "sword swallower",
+      "start": "Amber: Detective Boolean, as I live and breathe.",
+      "dialogue": [
+        "Boolean: Hello, can you please state your name for the record?",
+        "Amber: My pleasure, darling. I am Amber Saberlade, Sword Swallower and Fire Breathing Extraordinaire!",
+        "Boolean: Thank you, Ms. Saberblade.",
+        "Amber: Oh, you can call me Amber.",
+        "Boolean: Thank you, Ms. Saberblade. Can you please tell us your relationship with the victim?",
+        "Amber: Oh, of course, darling. Blaise and I were passionate lovers.",
+        "Boolean: Really?",
+        "Amber: Well... we would have been, if he weren’t so terribly shy. Poor thing was always lousy around women. Ya know I always see him practicing his flirtations with Wayne Jackson? They have dinner every night. Even gave him a rose once. But anyone could see there was an intense chemistry between us.",
+        "Boolean: Okay, where were you at the time of the murder?",
+        "Amber: In my tent, sleeping, darling. A woman needs her beauty sleep, after all. Well, at least until I heard the horrible screaming. No one’s up that early except for Wayne, Mac, and dear old Blaise. I heard Wayne was the one to find him. Poor thing left the circus over it. "
+      ],
+      "wordBank": [
+        "Intense Chemistry"
+      ],
+      "color": "red",
+      "speed": "1"
+    }, 
+        {
+		"name":"ven",
+		"start":"Marionetta: So I hear you’re quite the detective.",
+		"dialogue":[
+		"Boolean: May I have your name?",
+		"Marionetta: It’s Marionetta.",
+		"Boolean: And your last name?",
+		"Marionetta: Don’t have one. Or well, eventually I get one. I marry. But back then, when I was a girl, it was just Marionetta the Ventriloquist.",
+		"Boolean: I see. I hear you’re a new arrival. Welcome to the Ghost Realm.",
+		"Marionetta: I am. Thank you.",
+		"Boolean: I’d like to ask you a few questions. We’ve been missing your testimony for quite some time.",
+		"Marionetta; Whatever I can do to help.",
+		"Boolean: Thank you very much. Can you tell us your relationship with the victim?",
+		"Marionetta: I found the circus when I was 16. I was a runaway. Mr. Ronald took me in. Let me use his old dummy. As for O’Glory I...was not a fan of the man.",
+		"Boolean: Why?",
+		"Marionetta: He didn’t want me to be part of the circus. I wasn’t like his Trapeze twins. I had no family, no skills. And when I did join… we had <color=red> <size=16>artistic differences</size></color>.",
+		"Boolean: Where were you at the time of the murder, Marionetta?",
+		"Marionetta: I was on my way to my tent. I’d just got done talking to O’Glory.",
+		"Boolean: You spoke to Mr. O’Glory?",
+		"Marionetta: I did.",
+		"Boolean: And you were on your way to your tent from where?",
+		"Marionetta: The practice tent.",
+		"Boolean: The crime scene. ",
+		"Marionetta: I know how it looks.",
+		"Boolean: What did you two talk about?",
+		"Marionetta: My dummy. I’d gotten in trouble two weeks before because it went missing. I’d found it the night before and it had been damaged. I couldn’t get its mouth to open.",
+		"Boolean: Thank you, Marionetta."
+    ],
+		"wordBank": [
+		"Artistic Differences"
+    ],
+		"color":"red",
+		"speed":"1"
+	}
+	]
+}

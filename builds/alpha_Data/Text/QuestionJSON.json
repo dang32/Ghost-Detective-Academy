@@ -1,0 +1,88 @@
+{
+	"levelOne":[
+	{
+		"name":"strongman",
+		"start":"What do you want to ask me about?",
+		"contra":[
+		{
+		}
+		],
+
+		"flavor":[
+			{
+				"Morning":[
+				"Wayne: Ah, yes. I love mornings. I’m quite the early bird. I get up at 5am every day!"
+				],
+				"Glory Days":[
+				"Wayne: The Civil Right’s movement. Those were my glory days. I only wish Blaise had been along to see it."
+				]
+			}
+		],
+		"default":"Wayne: What? Why are you bothering me with nonsense?"
+	},
+    {
+      "name": "clown",
+      "start": "A question? For a clown? What do you want to ask about?",
+      "contra": [
+        {
+          "Morning": [
+            "Boolean: You said something funny earlier.",
+            "Mac Ronald: Of course I did. I’m a clown.",
+            "Boolean: That’s not what I meant.",
+            "Mac Ronald: Well then choose your words more carefully! Gahahah!",
+            "Boolean: Anyway, you said you knew that you were outside cleaning your props because, and I quote, \"there was a full moon out\".",
+            "Mac Ronald: Yeah, so?",
+            "Boolean: The murder happened early in the morning.",
+            "Mac Ronald: Wow. You got me. You’re just as amazing as they say.",
+            "Boolean: Cut it with the attitude, and tell me why you lied.",
+            "Mac Ronald: Lied? Can’t an old clown have a lapse in memory?",
+            "Boolean: Where were you at the time of the murder?",
+            "Mac Ronald: At the prop closet, like I said.",
+            "Mac Ronald: I noticed the sword swallower’s props were missing, so I went towards the practice tent to see if she’d left them there, but when I got there it was already on fire."
+          ],
+
+          "Morning #2": [
+            "Mac Ronald: here's my counter argument #1"
+          ],
+
+          "Morning #3": [
+            "Mac Ronald: here's my counter argument #2"
+          ],
+
+          "Morning #4": [
+            "Mac Ronald: here's my counter argument #3, you've won (gone to the next level)"
+          ]
+        }
+      ],
+
+      "flavor": [
+        {
+          "Glory Days": [
+            "Mac Ronald: The early circus days were the best days of my life. O’Glory was the business expert, and I was entertainment expert. But that meant,as time went on, I was stuck as the clown.",
+            "Mac Ronald: And then the Strongman came along, always strong arming people. I own half the circus, but no one ever listens to me. No one ever listens to the clown!"
+          ]
+        }
+      ],
+      "default": "Mac Ronald: Man, I don't know what you're talking about. Let me mope in peace."
+    },
+
+     {
+      "name": "sword swallower",
+      "start": "What do you want to ask about?",
+      "contra": [
+        {
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Amber: Yeah, I was practicing just this morning before everything happened"
+          ]
+         
+        }
+      ],
+      "default": "Amber: I don't know what you're talking about. Let me swallow swords in peace."
+    }
+	]
+}

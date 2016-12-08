@@ -1,28 +1,39 @@
 {
-	"levelOne":[
-	{
-		"name":"strongman",
-		"start":"What do you want to ask me about?",
-		"contra":[
-		{
-		}
-		],
+  "levelOne": [
+    {
+      "name": "strongman",
+      "start": "Wayne: What do you want to ask me about?",
+      "contra": [
+        {
+        }
+      ],
 
-		"flavor":[
-			{
-				"Morning":[
-				"Wayne: Ah, yes. I love mornings. I’m quite the early bird. I get up at 5am every day!"
-				],
-				"Glory Days":[
-				"Wayne: The Civil Right’s movement. Those were my glory days. I only wish Blaise had been along to see it."
-				]
-			}
-		],
-		"default":"Wayne: What? Why are you bothering me with nonsense?"
-	},
+      "flavor": [
+        {
+          "Morning": [
+            "Wayne: Ah, yes. I love mornings. I’m quite the early bird. I get up at 5am every day!"
+          ],
+          "Glory Days": [
+            "Wayne: The Civil Right’s movement. Those were my glory days. I only wish Blaise had been along to see it."
+          ],
+          "Intense Chemistry": [
+            "Wayne: Yeah, Amber had a crush on Blaise, but it didn’t bother me. Our relationship had always been pretty solid.",
+            "Wayne: It made Blaise pretty uncomfortable though. It wasn’t a secret among the troupe that we were together, but Amber didn’t seem to want to accept that."
+          ],
+          "Artistic Differences": [
+            "Wayne: There was no room for ego in our circus. We had a brand to maintain."
+          ],
+          "Father": [
+            "Wayne: Blaise and I- we wanted children. The universe had other plans for us."
+          ]
+
+        }
+      ],
+      "default": "Wayne: What? Why are you bothering me with nonsense?"
+    },
     {
       "name": "clown",
-      "start": "A question? For a clown? What do you want to ask about?",
+      "start": "Mac Ronald: A question? For a clown? What do you want to ask about?",
       "contra": [
         {
           "Morning": [
@@ -37,21 +48,12 @@
             "Boolean: Cut it with the attitude, and tell me why you lied.",
             "Mac Ronald: Lied? Can’t an old clown have a lapse in memory?",
             "Boolean: Where were you at the time of the murder?",
-            "Mac Ronald: At the prop closet, like I said.",
-            "Mac Ronald: I noticed the sword swallower’s props were missing, so I went towards the practice tent to see if she’d left them there, but when I got there it was already on fire."
-          ],
+            "Mac Ronald: At the prop closet, like I said. I was doing inventory. Saberblade’s props weren’t there. Woman is always leaving them lying around. Marionetta’s dummy was missing, too, though that was more unusual.",
+            "Mac Ronald: I picked up Saberblade’s props from the practice tent and went to look for the dummy. Or at least I could have sworn I did.",
+            "Mac Ronald: When I went back to the prop closet, they were missing again, so I went towards the practice tent to see if I’d forgotten them. When I got there the tent was already on fire. "
 
-          "Morning #2": [
-            "Mac Ronald: here's my counter argument #1"
-          ],
-
-          "Morning #3": [
-            "Mac Ronald: here's my counter argument #2"
-          ],
-
-          "Morning #4": [
-            "Mac Ronald: here's my counter argument #3, you've won (gone to the next level)"
           ]
+
         }
       ],
 
@@ -60,6 +62,15 @@
           "Glory Days": [
             "Mac Ronald: The early circus days were the best days of my life. O’Glory was the business expert, and I was entertainment expert. But that meant,as time went on, I was stuck as the clown.",
             "Mac Ronald: And then the Strongman came along, always strong arming people. I own half the circus, but no one ever listens to me. No one ever listens to the clown!"
+          ],
+          "Intense Chemistry": [
+            "Please, O’Glory had more chemistry with that burning tent than with Saberblade. Gahahah! Too soon?"
+          ],
+          "Artistic Differences": [
+            "Mac Ronald: Blaise wouldn’t know fun if it spit him in the eye. So Marionetta had a couple of jokes about him in her gig and swore a bit. What’s the big deal? She was just a kid and she’d been through a lot. Let her have her fun."
+          ],
+          "Father": [
+            "Mac Ronald: Any dirtbag can be a father. Just look at me."
           ]
         }
       ],
@@ -68,7 +79,7 @@
 
     {
       "name": "sword swallower",
-      "start": "What do you want to ask about?",
+      "start": "Amber: What do you want to ask about?",
       "contra": [
         {
         }
@@ -77,7 +88,20 @@
       "flavor": [
         {
           "Morning": [
-            "Amber: Yeah, I was practicing just this morning before everything happened"
+            "Amber: I much prefer evenings, darling."
+          ],
+          "Glory Days": [
+            "Amber: My circus days were my glory days. Oh, how the fans adored me!"
+          ],
+          "Intense Chemistry": [
+            "Amber: Oh, Blaise, we could have been honeymooning in Havana!"
+          ],
+          "Artistic Differences": [
+            "Amber: Oh, I encourage artistic differences. Makes things so much more interesting!",
+            "Boolean: Please don’t wink at me."
+          ],
+          "Father": [
+            "Amber: My father? Why do you want to know about him?"
           ]
 
         }
@@ -87,9 +111,9 @@
 
 
 
-         {
+    {
       "name": "ven",
-      "start": "What do you want to ask about?",
+      "start": "Marionetta: What do you want to ask about?",
       "contra": [
         {
         }
@@ -116,10 +140,412 @@
           "Father": [
             "Marionetta: I don’t like to talk about him. The way I see it, I never had one. Mr. Ronald is the closest thing I’ve ever had to a father."
           ]
-         
+
         }
       ],
-          "default": "Marionetta: I don't know what you're talking about, dummy"
+      "default": "Marionetta: I don't know what you're talking about, dummy"
+    }, 
+    {
+      "name": "trapeze",
+      "start": "Petra & Ez: What do you want to ask about?",
+      "contra": [
+        {
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Ez: My favorite part about mornings is breakfast.",
+            "Petra: He really likes waffles."
+          ],
+
+          "Glory Days": [
+            "Petra: Performing with Mr. O’Glory.",
+            "Ez: Those were our glory days."
+          ],
+
+          "Intense Chemistry": [
+            "Petra: Amber was always a clueless one.",
+            "Ez: She says with love. Dear Amber once thought Mr. O’Glory’s dinner announcement was a love letter."
+          ],
+
+          "Artistic Differences": [
+            "Petra: The circus had an image to maintain.",
+            "Ez: To stray from it is frankly, quite selfish.",
+            "Petra: And stupid.",
+            "Ez: She says with love."
+          ],
+
+          "Father": [
+            "Petra: Our real father was a dancer.",
+            "Ez: We lost him when we were young."
+          ]
+
+        }
+      ],
+      "default": "Sorry, we don't know what you're talking about"
     }
-	]
+  ],
+  "levelTwo": [
+    {
+      "name": "strongman",
+      "start": "Wayne: What can I do for you, my boy?",
+      "contra": [
+        {
+        
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Wayne: Ah, yes. I love mornings. I’m quite the early bird. I get up at 5am every day!"
+          ],
+          "Glory Days": [
+            "Wayne: The Civil Right’s movement. Those were my glory days. I only wish Blaise had been along to see it."
+          ],
+          "Intense Chemistry": [
+            "Wayne: Yeah, Amber had a crush on Blaise, but it didn’t bother me. Our relationship had always been pretty solid.",
+            "Wayne: It made Blaise pretty uncomfortable though. It wasn’t a secret among the troupe that we were together, but Amber didn’t seem to want to accept that."
+          ],
+          "Artistic Differences": [
+            "Wayne: There was no room for ego in our circus. We had a brand to maintain."
+          ],
+          "Father": [
+            "Wayne: Blaise and I- we wanted children. The universe had other plans for us."
+          ],
+          "Pranks": [
+            "Wayne: Well, there was the dummy incident, but other than that I don’t really know. Nothing else was reported to me."
+          ],
+          "Drama": [
+            "Wayne: Well, I was given a gift from a fan once, and that caused a small misunderstanding with Blaise. I honestly don’t know how it got into my tent."
+          ],
+          "Visitor": [
+            "Wayne: Ez tried to get me to allow him and his sister to perform at the festival. To revoke their privileges for a different performance, but I stayed firm.",
+            "Wayne: I’m afraid my boyfriend spoiled them a bit too much. Ez was pretty furious with me after that, but I don’t mind being the bad guy."
+          ],
+          "Like Magic": [
+            "Wayne: Yeah, Ms. Saberblade never picks up her props. Mr. Ronald always ends up having to clean up after her. It’s ridiculous."
+          ],
+          "Fire": [
+            "Wayne: I was about 10 minutes late to rehearsal, so I believe the fire started around 5:55am."
+          ]
+        }
+      ],
+      "default": "Wayne: What? Why are you bothering me with nonsense?"
+    },
+    {
+      "name": "clown",
+      "start": "Mac Ronald: What do you want, Boolean?",
+      "contra": [
+        {
+
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Mac Ronald: I already told you about that"
+            ],
+          "Glory Days": [
+            "Mac Ronald: The early circus days were the best days of my life. O’Glory was the business expert, and I was entertainment expert. But that meant,as time went on, I was stuck as the clown.",
+            "Mac Ronald: And then the Strongman came along, always strong arming people. I own half the circus, but no one ever listens to me. No one ever listens to the clown!"
+          ],
+          "Pranks": [
+            "Mac Ronald: That’s kid stuff. Talk to me when you man up and want to clown around professionally."
+          ],
+          "Drama": [
+            "Mac Ronald: That isn’t my favorite genre. I prefer something with a couple of more laughs. Like a murder mystery!"
+          ],
+          "Visitor": [
+            "Mac Ronald: If you ask me I’m getting one visitor a little too often."
+          ],
+          "Like Magic": [
+            "Mac Ronald: I'm a clown not a magician."
+          ],
+           "Fire": [
+            "Mac Ronald: Fire started around 6:00am, I think."
+          ]
+        }
+      ],
+      "default": "Mac Ronald: Man, I don't know what you're talking about. Let me mope in peace."
+    },
+
+    {
+      "name": "sword swallower",
+      "start": "What do you want to ask about?",
+      "contra": [
+        {
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Amber: I much prefer evenings, darling."
+          ],
+          "Glory Days": [
+            "Amber: My circus days were my glory days. Oh, how the fans adored me!"
+          ],
+          "Intense Chemistry": [
+            "Amber: Oh, Blaise, we could have been honeymooning in Havana!"
+          ],
+          "Artistic Differences": [
+            "Amber: Oh, I encourage artistic differences. Makes things so much more interesting!",
+            "Boolean: Please don’t wink at me."
+          ],
+          "Father": [
+            "Amber: My father? Why do you want to know about him?"
+          ],
+          "Pranks": [
+            "Amber: To be honest, I’m not a fan of pranks. I think they’re a little mean, and we were one big happy family here. I simply don’t see that ever happening with this troupe."
+          ],
+          "Drama": [
+            "Amber: Oh, I live for drama, darling. What do you wanna know? Ah, do you know that Ez once left frogs in little Marionetta’s tent? It was the cutest thing. I think he had a little crush on her."
+          ],
+          "Visitor": [
+            "Amber: Oh, I got lots of male visitors. My fans left me gifts and roses all of the time. My heart beats for Blaise, of course, but I’m allowed to have some fun!"
+          ],
+          "Like Magic": [
+            "Amber: You know what’s also like magic? My paprika and lemon sauce. It’s to die for! What do you say, Detective?"
+          ],
+          "Fire": [
+            "Amber: The fire woke me up, but I didn’t really check the time. Best I can give you is an estimate. I think it happened around 6:00am?"
+          ]
+        }
+      ],
+      "default": "Amber: I don't know what you're talking about. Let me swallow swords in peace."
+    },
+
+
+
+    {
+      "name": "ven",
+      "start": "What do you want to ask about?",
+      "contra": [
+        {
+
+        }
+      ],
+
+      "flavor": [
+        {
+           "Morning": [
+            "Marionetta: I’m not really a morning person."
+          ],
+
+          "Glory Days": [
+            "Marionetta: My days with O’Glory were admittedly… not the best."
+          ],
+
+          "Intense Chemistry": [
+            "Marionetta: Gross."
+          ],
+
+          "Artistic Differences": [
+            "Marionetta: O’Glory banned any jokes about him from my bit, but I’m the one with the ego."
+          ],
+
+          "Father": [
+            "Marionetta: I don’t like to talk about him. The way I see it, I never had one. Mr. Ronald is the closest thing I’ve ever had to a father."
+          ],
+          "Pranks": [
+            "Marionetta: Ez left frogs in my tent once. I told Ms. Saberblade and she pinched my cheek and told me he had a crush on me.",
+            "Marionetta: I wanted to punch him, but I didn’t want to lose my place in the circus, so I spit into his coffee once. I should have just punched him."
+          ],
+          "Drama": [
+            "Marionetta: Everyone had problems with someone. I’m surprised O’Glory was the only one who ended up dead."
+          ],
+          "Visitor": [
+            "Marionetta: I don’t get many visitors."
+          ],
+          "Like Magic": [
+            "Marionetta: Wanna see a dummy disappear?",
+            "Boolean: Well, that’s rude.",
+            "Marionetta: Oh, goodness, I didn’t mean you!"
+          ],
+           "Fire": [
+            "Marionetta: I don’t mean to speak ill of the dead, but I did not lament his death.",
+            "Boolean: You’re dead, Marionetta.",
+            "Marionetta: Ah, yes. It’s easy to forget."
+          ]
+
+        }
+      ],
+      "default": "Marionetta: I don't know what you're talking about, dummy"
+    },
+    {
+      "name": "trapeze",
+      "start": "Petra and Ez: What can we do for you, Detective?",
+      "contra": [
+        {
+          "Visitor": [
+            "Boolean: You said you were in bed the morning of the murder?",
+            "Petra and Ez: We did.",
+            "Boolean: Mr. Jackson said that he had a visitor at his tent. You, Ez.",
+            "Ez: Oh, did he now? I could have sworn that happened the morning before. Is he sure that was the same day?",
+            "Boolean: He said that it made him late to his rehearsal. Without your visitation he would have made it in time to save his boyfriend. I have another testimony to corroborate his story.",
+            "Ez: Oh, my mistake. I didn’t realize that was the same morning. Yeah, he wanted to see me about my performance. Apparently I hadn’t been doing that well lately, but we were fine.",
+            "Boolean: That’s all you talked about?",
+            "Ez: Yeah, that was it."
+          ],
+          "Pranks": [
+            "Boolean: That’s not what Mr. Jackson said.",
+            "Ez: Oh?",
+            "Boolean: I’ve heard you and your sister like to play a lot of pranks.",
+            "Petra: We do.",
+            "Boolean: And you got into some trouble for one in particular: a damaged dummy. Mr. Jackson said you met up with him to renegotiate your punishment for the prank.",
+            "Ez: Oh, my apologies. It was a very long time ago."
+          ]
+
+          
+        }
+      ],
+
+      "flavor": [
+        {
+          "Morning": [
+            "Ez: My favorite part about mornings is breakfast.",
+            "Petra: He really likes waffles."
+          ],
+
+          "Glory Days": [
+            "Petra: Performing with Mr. O’Glory.",
+            "Ez: Those were our glory days."
+          ],
+
+          "Intense Chemistry": [
+            "Petra: Amber was always a clueless one.",
+            "Ez: She says with love. Dear Amber once thought Mr. O’Glory’s dinner announcement was a love letter."
+          ],
+
+          "Artistic Differences": [
+            "Petra: The circus had an image to maintain.",
+            "Ez: To stray from it is frankly, quite selfish.",
+            "Petra: And stupid.",
+            "Ez: She says with love."
+          ],
+
+          "Father": [
+            "Petra: Our real father was a dancer.",
+            "Ez: We lost him when we were young."
+          ],
+          "Pranks": [
+            "Petra: We like to have fun.",
+            "Ez: It’s mostly harmless. Our way of bonding with the troupe."
+          ],
+          "Drama": [
+            "Petra: We never really fought with Mr. O’Glory.",
+            "Ez: We had a problem here and there with some of the other troupe members.",
+            "Petra: The ventriloquist kept giving us performing advice like she knew more than us. The sword swallower is obnoxious and arrogant and thinks she’s better than everyone, and the strongman...",
+            "Ez: Was a bit strict.",
+            "Petra: I didn’t like him…",
+            "Ez: But besides that, we didn’t have too many problems."
+          ],
+          "Like Magic": [
+            "Petra: Have you ever seen Mr. O’Glory perform?",
+            "Ez: Now that was like magic."
+          ],
+          "Fire": [
+            "Petra: We don’t know what time the fire started.",
+            "Ez: Sure was horrifying, though."
+          ]
+
+        }
+      ],
+      "default": "Petra & Ez: Sorry, we don't know what you're talking about"
+    }
+  ],
+
+  "final":[{
+      "name":"final",
+      "start": ["But when did the person do it?"],
+      "contra":[
+        {
+          "final": [
+            "Boolean: Thank you for meeting me here.",
+            "Mac Ronald: I’m only here for the free snacks.",
+            "Boolean: There are no snacks. Who told you there’d be snacks? Whatever, thanks for coming.",
+            "Mr. Ronald. I’m here to explain to you the events of Mr. O’Glory’s death.",
+            "Petra and Ez: Who killed him?",
+            "Boolean: I will get to that. First, I present to you the evidence.",
+            "Boolean:  The morning of the murder, the killer set the tent on fire, but went out of their way to ensure that the victim wouldn’t escape. We know this because of the _________"
+          ],
+          "rope": [
+            "Boolean: Right! The killer cut the ropes to the tent, causing it to fall and collapse onto the victim, ensuring that he wouldn’t escape and would get caught in the flames.",
+            "Marionetta: Couldn’t the fire have caused the ropes to separate like that?",
+            "Boolean: No, it’s clear that someone intentionally put the ropes in this sort of condition. Then, the tent was lit on fire. The indirect murder weapon had to be the  ____________"
+          ],
+          "swords": [
+            "Boolean: Yes, Ms. Saberblade never put away her props making them accessible to everyone. They were easy to come by, and as a bonus, Ms. Saberblade would be at the top of the suspect list.",
+            "Amber: But why? Why betray the troupe? And why would someone want to frame little, old, me?",
+            "Boolean: There seemed to be a lot of animosity in this troupe. Honestly, I think your involvement was just convenient. As for the murder, I believe the killer’s motive was ________"
+          ],
+          "ballet": [
+            "Wayne: A ballet outfit?",
+            "Mac Ronald: And I thought I was the clown.",
+            "Boolean: Just stay with me.",
+            "Wayne: You’d have us believe the murderer killed my Blaise over a ballet outfit?",
+            "Boolean: Actually, I don’t think he was the intended target.",
+            "Wayne: What? Who was it then?",
+            "Mac Ronald: What proof do you have, Boolean, that the killer had another target?"
+          ],
+          "sched": [
+            "Boolean: The murder occurred during Mr. Jackson’s rehearsal time. I believe he was the intended target.",
+            "Wayne: Me?",
+            "Boolean: Yes. I believe the killer never meant to hurt Mr. O’Glory. I believe they looked up to him even.",
+            "Boolean: I think they were jealous of your relationship with Mr. O’Glory. And above all, they hated having to respect your authority.",
+            "Boolean: I believe before the murder, the killer attempted to tarnish your relationship with your boyfriend. They went into your tent and left________"
+          ],
+          "present": [
+            "Wayne: That’s why I got that gift?",
+            "Boolean: Yes, and when that didn’t work, they tried to kill you.",
+            "Wayne: But why then? I’d been working with the troupe for months. I’d always been in a relationship with Blaise. That was never a secret. Why did they choose that time to try and kill me?",
+            "Boolean: Not too long before the murder, I believe you got into an altercation with the killer. You were fighting over _________"
+          ],
+          "gum": [
+            "Wayne: The dummy. You mean… the trapeze kids killed Blaise? No!",
+            "Amber: No!",
+            "Marionetta: I could see it.",
+            "Mac Ronald: Yeah, that makes sense.",
+            "Petra: What?",
+            "Ez: No! We didn’t!",
+            "Wayne: I’m inclined to agree. How exactly did you come to this conclusion, Detective?",
+            "Boolean: Marionetta spoke to Mr. O’Glory the morning he was killed. They were to meet at Mr.O’Glory’s tent. Marionetta had left a note that stayed there all night.",
+            "Boolean: However, he changed the location at the last minute to the practice tent so he could surprise you with flowers. If someone wanted to kill Mr. O’Glory at that time in that way…",
+            "Wayne: They would have done so at his own tent.",
+            "Boolean: Instead, they killed him at the practice tent during your scheduled rehearsal time, a rehearsal time you are never late for.",
+            "Wayne: But Ez stopped to talk to me before I could go.",
+            "Boolean: Yes.",
+            "Wayne: Why would he do that if he were trying to kill me?",
+            "Boolean: Because he wasn’t. He had no idea anyone was trying to kill you. And that’s where her mistake lies.",
+            "Boolean: Petra tried to kill you, Mr. Jackson. Her brother just tried to help cover it up after the fact.",
+            "Boolean: She didn’t check to see who was in the tent when she set it on fire, and she didn’t clue in her brother, who incidentally saved your life.",
+            "Ez: That’s ridiculous!",
+            "Boolean: Ez did most of the talking during the testimonies, often talking over his sister. I believe he did this to stop her from incriminating herself.",
+            "Boolean:  He lied about his whereabouts during the murder because he wanted to give a better alibi for his sister, and didn’t want me to connect the damaged dummy to the murder.",
+            "Marionetta: And the ballet outfit?",
+            "Boolean: Was found in the trapeze artists’ tent, along with an invitation to the 10th Anniversary Festival. Petra had invited a reporter to see her performance. It seemed she had other aspirations.",
+            "Boolean: Aspirations jeopardized by your punishment for their prank.",
+            "Ez: Wait, you were just going to leave me there? Alone? With them?",
+            "Petra: Ez…",
+            "Ez: How could you? ",
+            "Petra: You were just as talented as I was. You would have made it out of there.",
+            "Ez: Petra!",
+            "Petra: I found an out, Ez! Tell me you wouldn’t have done the same!",
+            "Ez: You were right, Detective. She killed him. I won’t protect her anymore.",
+            "Petra: And he covered it up! Let’s go down together, Brother. Just like you wanted."
+
+          ]
+        }
+      ],
+
+      "flavor":[
+        {
+        }
+      ],
+      "default":"Boolean: No, that doesn't seem right, let me reiterate from the beginning."
+    }]
 }

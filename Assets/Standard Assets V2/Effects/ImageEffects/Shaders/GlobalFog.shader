@@ -1,6 +1,7 @@
 Shader "Hidden/GlobalFog" {
 Properties {
 	_MainTex ("Base (RGB)", 2D) = "black" {}
+	_Color("My colour", Color) = (1, 0, 0, 1)
 }
 
 CGINCLUDE
@@ -8,8 +9,9 @@ CGINCLUDE
 	#include "UnityCG.cginc"
 
 	uniform sampler2D _MainTex;
+	half4 _Color;
+
 	uniform sampler2D_float _CameraDepthTexture;
-	
 	// x = fog height
 	// y = FdotC (CameraY-FogHeight)
 	// z = k (FdotC > 0.0)
@@ -22,7 +24,7 @@ CGINCLUDE
 	int4 _SceneFogMode; // x = fog mode, y = use radial flag
 	float4 _SceneFogParams;
 	#ifndef UNITY_APPLY_FOG
-	half4 unity_FogColor;
+	half4 _FogColor;
 	half4 unity_FogDensity;
 	#endif	
 
@@ -119,7 +121,7 @@ CGINCLUDE
 	half4 ComputeFog (v2f i, bool distance, bool height) : SV_Target
 	{
 		half4 sceneColor = tex2D(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv));
-		
+		half4 _FogColor = _Color;
 		// Reconstruct world space position & direction
 		// towards this screen pixel.
 		float rawDepth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, UnityStereoTransformScreenSpaceTex(i.uv_depth));
@@ -143,7 +145,7 @@ CGINCLUDE
 		
 		// Lerp between fog color & original scene color
 		// by fog amount
-		return lerp (unity_FogColor, sceneColor, fogFac);
+		return lerp (_FogColor, sceneColor, fogFac);
 	}
 
 ENDCG

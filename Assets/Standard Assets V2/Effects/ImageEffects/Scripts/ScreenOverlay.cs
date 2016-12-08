@@ -8,6 +8,7 @@ namespace UnityStandardAssets.ImageEffects
     [AddComponentMenu ("Image Effects/Other/Screen Overlay")]
     public class ScreenOverlay : PostEffectsBase
 	{
+        
 	    public enum OverlayBlendMode
 		{
             Additive = 0,

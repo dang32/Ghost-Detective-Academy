@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.ImageEffects
 {
@@ -22,10 +23,10 @@ namespace UnityStandardAssets.ImageEffects
         public float heightDensity = 2.0f;
 		[Tooltip("Push fog away from the camera by this amount")]
         public float startDistance = 0.0f;
-
+        public Color FogColor = RenderSettings.fogColor;
         public Shader fogShader = null;
         private Material fogMaterial = null;
-
+        Color theFogColor;
 
         public override bool CheckResources ()
 		{
@@ -107,6 +108,16 @@ namespace UnityStandardAssets.ImageEffects
             sceneParams.w = linear ? sceneEnd * invDiff : 0.0f;
             fogMaterial.SetVector ("_SceneFogParams", sceneParams);
 			fogMaterial.SetVector ("_SceneFogMode", new Vector4((int)sceneMode, useRadialDistance ? 1 : 0, 0, 0));
+            
+            if(SceneManager.GetActiveScene().buildIndex!=0)
+            {
+                theFogColor = RenderSettings.fogColor;
+            }
+            else
+            {
+                theFogColor = FogColor;
+            }
+            fogMaterial.SetVector("_Color", theFogColor);
 
             int pass = 0;
             if (distanceFog && heightFog)

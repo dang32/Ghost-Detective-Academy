@@ -31,8 +31,16 @@ public class ViewSwitch : MonoBehaviour {
     public bool outside;
     Rigidbody rigi;
     Vector3 direction;
+    public float prevMouse;
+    public float horizontalLookMultiplier;
+    float startingCamRot;
+    float startingCamRotY;
+
     // Use this for initialization
     void Start () {
+        startingCamRot = transform.eulerAngles.x;
+        startingCamRotY = transform.eulerAngles.y;
+
         rigi = GetComponent<Rigidbody>();
         cam = GetComponent<Camera>();
 
@@ -95,15 +103,20 @@ public class ViewSwitch : MonoBehaviour {
 
         }
         rigi.velocity = Vector3.zero;
-        if (cam.fieldOfView> fovStart-4)
+        if (!transitioning&&!zoomed)
         {
             
             rigi.position = Vector3.Lerp(
                             rigi.position,
                             Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0),
                             Time.deltaTime * 12);
-                            
-           
+
+
+            // offsetFromPlayer =RotatePointAroundPivot(transform.position, player.position,new Vector3(0,Input.mousePosition.x- prevMouse,0))-player.position;
+           // transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+     
+           // rigi.rotation =Quaternion.Lerp(rigi.rotation,
+             //   Quaternion.Euler(startingCamRot + (-((Input.mousePosition.y / Screen.height) - .5f) / .5f) * horizontalLookMultiplier, startingCamRotY + (((Input.mousePosition.x / Screen.width) - .5f) / .5f)*horizontalLookMultiplier, transform.eulerAngles.z),.75f*Time.deltaTime);
             //makes camera follow player if it could move
             /*
             transform.position = Vector3.Lerp(
@@ -132,7 +145,7 @@ public class ViewSwitch : MonoBehaviour {
   //      playerStartPos = player.position;
   //      playerStartRot = player.rotation;
         //set position, rotation, fieldOfView, and fog   when switching between zoomed and overhead
-        while (elapsedTime < transitionTime)
+        while (elapsedTime <= transitionTime||cam.fieldOfView<59)
         {
 
             Vector3 startPos = Vector3.Scale(player.position + offsetFromPlayer, new Vector3(1, 0, 1)) + new Vector3(0, camHeight, 0);
@@ -142,7 +155,7 @@ public class ViewSwitch : MonoBehaviour {
 
             transform.position = Vector3.Lerp(startPos, zoomedTrans.position, elapsedTime/transitionTime);
             transform.rotation = Quaternion.Lerp(overheadRot, zoomedTrans.rotation, elapsedTime / transitionTime);
-            cam.fieldOfView = Mathf.Lerp(fovStart, fovEnd, elapsedTime / transitionTime);
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fovEnd, elapsedTime / transitionTime);
             RenderSettings.fogDensity = Mathf.Lerp(.015f, .005f, elapsedTime / transitionTime);
             faceLight.intensity = Mathf.Lerp(faceLight.intensity, 1.7f, elapsedTime / transitionTime);
 
@@ -152,6 +165,7 @@ public class ViewSwitch : MonoBehaviour {
             
             yield return new WaitForEndOfFrame();
         }
+        transitioning = false;
     }
     public IEnumerator Overhead()
     {
@@ -185,10 +199,32 @@ public class ViewSwitch : MonoBehaviour {
 
             yield return new WaitForEndOfFrame();
         }
+        transitioning = false;
+
     }
     public void SwitchToOverhead()
     {
 		StartCoroutine("Overhead");
         zoomed = false;
+    }
+
+    public Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles) {
+  Vector3 dir = point - pivot; // get point direction relative to pivot
+   dir = Quaternion.Euler(angles) * dir; // rotate it
+   point = dir + pivot; // calculate rotated point
+   return point; // return it
+    }
+
+
+    void RotateAround(Vector3 center, Vector3 axis, float angle)
+    {
+        Vector3 pos = transform.position;
+        Quaternion rot = Quaternion.AngleAxis(angle, axis); // get the desired rotation
+        Vector3 dir = pos - center; // find current direction relative to center
+        dir = rot * dir; // rotate the direction
+        //transform.position = center + dir; // define new position
+        offsetFromPlayer = (center + dir) - player.position;
+        //Quaternion myRot = transform.rotation;
+        //transform.rotation *= Quaternion.Inverse(myRot) * rot * myRot;
     }
 }

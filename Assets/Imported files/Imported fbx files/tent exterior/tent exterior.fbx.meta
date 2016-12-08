@@ -11,21 +11,50 @@ ModelImporter:
     100006: Sweep_1
     100008: tent
     100010: //RootNode
+    100012: Boole
+    100014: Cinema4D_Editor_2
+    100016: Extrude
+    100018: Extrude__Extrude_
+    100020: floor
+    100022: Boole_1
+    100024: Tube_Extrude
     400000: Cinema4D_Editor
     400002: Plane_1
     400004: Plane_3
     400006: Sweep_1
     400008: tent
     400010: //RootNode
+    400012: Boole
+    400014: Cinema4D_Editor_2
+    400016: Extrude
+    400018: Extrude__Extrude_
+    400020: floor
+    400022: Boole_1
+    400024: Tube_Extrude
     2300000: Plane_1
     2300002: Plane_3
     2300004: Sweep_1
+    2300006: Boole
+    2300008: Extrude
+    2300010: Extrude__Extrude_
+    2300012: floor
+    2300014: Tube_Extrude
     3300000: Plane_1
     3300002: Plane_3
     3300004: Sweep_1
+    3300006: Boole
+    3300008: Extrude
+    3300010: Extrude__Extrude_
+    3300012: floor
+    3300014: Tube_Extrude
     4300000: Sweep_1
     4300002: Plane_3
     4300004: Plane_1
+    4300006: Boole
+    4300008: Extrude__Extrude_
+    4300010: floor
+    4300012: Extrude
+    4300014: Tube_Extrude
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -56,20 +85,20 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 93
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 82
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

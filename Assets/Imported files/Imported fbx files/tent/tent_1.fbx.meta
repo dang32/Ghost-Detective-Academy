@@ -11,24 +11,36 @@ ModelImporter:
     100006: floor
     100008: tent
     100010: //RootNode
+    100012: Cinema4D_Editor_2
+    100014: Extrude
+    100016: Extrude__Extrude_
     400000: Cinema4D_Editor
     400002: edge_ring
     400004: Figure
     400006: floor
     400008: tent
     400010: //RootNode
+    400012: Cinema4D_Editor_2
+    400014: Extrude
+    400016: Extrude__Extrude_
     2300000: edge_ring
     2300002: Figure
     2300004: floor
     2300006: tent
+    2300008: Extrude
+    2300010: Extrude__Extrude_
     3300000: edge_ring
     3300002: Figure
     3300004: floor
     3300006: tent
+    3300008: Extrude
+    3300010: Extrude__Extrude_
     4300000: edge_ring
     4300002: tent
     4300004: Figure
     4300006: floor
+    4300008: Extrude__Extrude_
+    4300010: Extrude
     9500000: //RootNode
   materials:
     importMaterials: 1

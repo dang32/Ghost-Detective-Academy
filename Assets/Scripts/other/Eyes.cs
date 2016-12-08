@@ -68,6 +68,12 @@ public class Eyes : MonoBehaviour {
             mat.SetTexture("_MainTexB", blank);
             Blink(blinkStartTime);
         }
+        else
+        {
+            mat.SetTexture("_MainTexC", blank);
+            mat.SetTexture("_MainTex", fullFace);
+            mat.SetTexture("_MainTexB", pupils);
+        }
         if (zoomed)
         {
             pos = Vector2.Lerp(pos, target + offset, 10 * Time.deltaTime);

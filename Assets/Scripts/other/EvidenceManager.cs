@@ -9,10 +9,12 @@ public class EvidenceManager : MonoBehaviour
     public int section; //if section is 0, first 3 sparkles show, if 1 next 3 show 
     int currentScene;
     public GameObject[] evidenceImages;
+    public string[] evidenceDesc;
+
     public int totalEvidenceFound;
     public static EvidenceManager instance = null;//Static instance of GameManager which allows it to be accessed by any other script.
     public EvidenceText text;
-
+    
     //every sparkles has it's own script with an index saying which piece of evidence it is
     //when someone walks into it, this script is given the index and it enables the piece of evidence ui matched with it (by indices)
     //The sparkles list keeps track of the state of a sparkle,   0: means they're unset (not active), 1:they've been set to be active, -1: you've walked into them
@@ -39,16 +41,20 @@ public class EvidenceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         //triggers when scene changes
         if (currentScene != SceneManager.GetActiveScene().buildIndex)
         {
             //gets all evidence ui gameobjects
-            for (int i = 0; i < GameObject.Find("UICanvas").transform.GetChild(4).childCount; i++)
+            for (int i = 0; i < 6; i++)
             {
-                evidenceImages[i] = GameObject.Find("UICanvas").transform.GetChild(4).GetChild(i).gameObject;
+                evidenceImages[i] = GameObject.Find("UICanvas").transform.GetChild(4).GetChild(i+1).gameObject;
                 if (sparkles[i] == -1)
                 {
-                    evidenceImages[i].SetActive(true);
+                    evidenceImages[i].transform.GetChild(0).gameObject.SetActive(true);
                 }
             }
             ReLoadSparkles();
@@ -94,7 +100,7 @@ public class EvidenceManager : MonoBehaviour
                 else
                 {
                     sparkles[evidenceIndex] = -1;
-                    sparkle.GetComponent<EvidenceSparkle>().DisableSparkle();
+                    sparkle.GetComponent<EvidenceSparkle>().DisableSparkleWithoutCloud();
                     evidenceImages[evidenceIndex].SetActive(true);
                 }
             }
@@ -109,10 +115,11 @@ public class EvidenceManager : MonoBehaviour
     //when somenone walks into evidence
     public void FoundEvidence(int evidenceIndex)
     {
-        text.StartCoroutine("Appear", evidenceIndex);
+        text.Appear(evidenceIndex);
+
         sparkles[evidenceIndex] = -1;
         totalEvidenceFound++;
-        evidenceImages[evidenceIndex].SetActive(true);
+        evidenceImages[evidenceIndex].transform.GetChild(0).gameObject.SetActive(true);
 
         if (totalEvidenceFound == 3)
         {

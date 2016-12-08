@@ -33,11 +33,12 @@ public class ActivateText : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider col)
     {
-
+        if (col.name == "main char")
+        {
             Debug.Log("here");
             textManager.EnableTextBox();
             textManager.npcName = transform.name;
-            Debug.Log("activate text npcname "+transform.name);
+            Debug.Log("activate text npcname " + transform.name);
             cameraSwitcher.isTalking = true;
             dialogueBoxes.SetActive(true);
             listen.SetActive(true);
@@ -55,11 +56,11 @@ public class ActivateText : MonoBehaviour {
                 if (textManager.listenJson[i].name == textManager.npcName)
                 {
                     text.GetComponent<Text>().text = textManager.listenJson[i].start;
-                    textManager.defaultText = textManager.listenJson[i].start;
+                    textManager.StartCoroutine("TypeText", textManager.listenJson[i].start);
                 }
             }
 
-
+        }
         
     }
 }

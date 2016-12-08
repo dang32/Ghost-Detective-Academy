@@ -34,7 +34,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public PlayerMovement playerMovement;
     public PlayerHistory playerHistory;
-
+    
     public bool isClicked;
 	public bool isActive;
 	public bool stopPlayerMovement;
@@ -50,6 +50,15 @@ public class TextBoxManager : MonoBehaviour {
     public GameObject exclamationMark;
     int currentScene;
     public NextLevelText nextLevelText;
+    bool scrollingTextDone=true;
+    public int[] characterWantsToSayLevel; //order of scenes
+    public int totalContradictions;
+    public Transform[] tentExitPositions;
+    public int prevScene;
+    public AudioSource indoorRain;
+    public AudioSource outdoorRain;
+    public AudioSource music;
+    public bool instructionsDone;
     void Start()
     {
         cameraZoom = FindObjectOfType<ViewSwitch>();
@@ -62,6 +71,7 @@ public class TextBoxManager : MonoBehaviour {
 
         playerMovement.frozen = false;
         canvas = GameObject.Find("UICanvas");
+
         listenJson = listenJsonParser.parseLevelJson("levelOne");
 		questionJson = questionJsonParser.parseLevelJson("levelOne");
     }
@@ -69,8 +79,55 @@ public class TextBoxManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(currentScene!=SceneManager.GetActiveScene().buildIndex)
+        if(Input.GetKeyDown(KeyCode.Space)&&isActive)
         {
+            OnArrowClick();
+        }
+        if(isActive)
+        {
+            music.volume = Mathf.Lerp(music.volume, .05f, 2 * Time.deltaTime);
+        }
+        else
+        {
+            music.volume = Mathf.Lerp(music.volume, .005f, 2 * Time.deltaTime);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex==0)
+        {
+            outdoorRain.volume= Mathf.Lerp(outdoorRain.volume, .075f, 2 * Time.deltaTime);
+        }
+        else
+        {
+            outdoorRain.volume = Mathf.Lerp(outdoorRain.volume, 0, 2 * Time.deltaTime);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 6 && !isActive)
+        {
+            indoorRain.volume = Mathf.Lerp(indoorRain.volume, .05f, 2 * Time.deltaTime);
+        }
+        else {
+            indoorRain.volume = Mathf.Lerp(indoorRain.volume, 0, 2 * Time.deltaTime);
+        }
+
+        //if (Input.GetKeyDown("l"))
+        //{
+        //    Debug.Log("THAT'S NEXT LEVEL!");
+        //    nextLevelText.StartCoroutine("Appear" ,1);
+        //    currentLevel++;
+        //    listenJson = listenJsonParser.parseLevelJson("levelTwo");
+        //    questionJson = questionJsonParser.parseLevelJson("levelTwo");
+        //}
+
+        //if (Input.GetKeyDown("p"))
+        //{
+        //    SceneManager.LoadScene(6);
+        //}
+        if (currentScene!=SceneManager.GetActiveScene().buildIndex)
+        {
+            if(SceneManager.GetActiveScene().buildIndex!=0)
+            {
+                prevScene = SceneManager.GetActiveScene().buildIndex;
+            }
             NewSceneLoaded();
         }
         currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -101,8 +158,11 @@ public class TextBoxManager : MonoBehaviour {
 
         if(!isActive&& (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d")))
         {
-            wordBank.DisableWordBank();
-            noteButton.SetActive(true);
+            if (SceneManager.GetActiveScene().buildIndex != 6)
+            {
+                wordBank.DisableWordBank();
+                noteButton.SetActive(true);
+            }
         }
 
         //detects wasd and removes player from zoomed view
@@ -119,19 +179,21 @@ public class TextBoxManager : MonoBehaviour {
 
    public void  OnArrowClick()
     {
+        if(scrollingTextDone)
+        currentLine += 1;
 
         //listen
         if (listenClick)
         {
-            currentLine += 1;
             if (currentLine <= endAtLine)
             {
-                screenText.text = textLines[currentLine];
+                //screenText.text = textLines[currentLine];
+                StartCoroutine("TypeText", textLines[currentLine]);
             }
             else
             {
                 wordBank.AddWordsToBank();
-
+                characterWantsToSayLevel[SceneManager.GetActiveScene().buildIndex-1] = currentLevel + 1;
                 listenClick = false;
                 endAtLine = -1;
                 currentLine = 0;
@@ -140,7 +202,9 @@ public class TextBoxManager : MonoBehaviour {
                 listenButton.SetActive(true);
                 questionButton.SetActive(true);
                 wordBank.DisableWordBank();
-                screenText.text = defaultText;
+                StartCoroutine("TypeText", defaultText);
+
+                //screenText.text = defaultText;
                 arrow.transform.GetChild(0).GetComponent<Text>().text = "→";
 
                 return;
@@ -150,10 +214,11 @@ public class TextBoxManager : MonoBehaviour {
         //questions
         if (questionClick)
         {
-            currentLine += 1;
             if (currentLine <= endAtLine)
             {
-                screenText.text = questionLines[currentLine];
+                StartCoroutine("TypeText", questionLines[currentLine]);
+
+                //screenText.text = questionLines[currentLine];
             }
             else
             {
@@ -161,13 +226,16 @@ public class TextBoxManager : MonoBehaviour {
                 endAtLine = -1;
                 currentLine = 0;
                 textLines.Clear();
-                screenText.text = questionStartText;
+                StartCoroutine("TypeText", questionStartText);
+
+                //screenText.text = questionStartText;
                 arrow.transform.GetChild(0).GetComponent<Text>().text = "→";
                 wordBank.EnableWordBank();
                 return;
             }
 
         }
+
     }
 
 
@@ -179,11 +247,45 @@ public class TextBoxManager : MonoBehaviour {
     	{
     		if (listenJson[i].name == npcName)
     		{
+                if(currentLevel> characterWantsToSayLevel[SceneManager.GetActiveScene().buildIndex-1])
+                {
+                    listenJson = listenJsonParser.parseLevelJson("levelOne");
+                    questionJson = questionJsonParser.parseLevelJson("levelOne");
+                    for (int p = 0; p < listenJson.Count;p++)
+                    {
+                        if (listenJson[p].name == npcName)
+                        {
+                            for (int j = 0; j < listenJson[p].wordBank.Count; j++)
+                            {
+                                playerHistory.addWord(listenJson[p].wordBank[j]);
+                            }
+                        }
+                    }
+
+                    for (int j = 0; j < listenJson[i].dialogue.Count; j++)
+                    {
+                        List<string> stringsToAdd = SplitStrings(listenJson[i].dialogue[j]);
+                        for (int k = 0; k < stringsToAdd.Count; k++)
+                        {
+                            textLines.Add(stringsToAdd[k]);
+                        }
+
+                        Debug.Log(listenJson[i].dialogue[j]);
+                    }
+                    listenJson = listenJsonParser.parseLevelJson("levelTwo");
+                    questionJson = questionJsonParser.parseLevelJson("levelTwo");
+                }
 				for (int j = 0; j < listenJson[i].dialogue.Count; j++)
 				{
-					textLines.Add(listenJson[i].dialogue[j]);
+                    List < string > stringsToAdd = SplitStrings(listenJson[i].dialogue[j]);
+                    for(int k=0;k<stringsToAdd.Count;k++)
+                    {
+                        textLines.Add(stringsToAdd[k]);
+                    }
+					
 					Debug.Log(listenJson[i].dialogue[j]);
 				}
+
 			}
 		}
 
@@ -202,7 +304,9 @@ public class TextBoxManager : MonoBehaviour {
         //resets to main listen/question screen
 		endAtLine = textLines.Count - 1;
 		currentLine = 0;
-		screenText.text = textLines[currentLine];
+        StartCoroutine("TypeText", textLines[currentLine]);
+
+        //screenText.text = textLines[currentLine];
         isClicked = true;
 		stopPlayerMovement = true;
 		listenClick = true;
@@ -216,9 +320,12 @@ public class TextBoxManager : MonoBehaviour {
         //load starting text
 		for (int i = 0; i < questionJson.Count; i++)
     	{
+
     		if (questionJson[i].name == npcName)
     		{
-    			screenText.text = questionJson[i].start;
+                StartCoroutine("TypeText", questionJson[i].start);
+
+              //  screenText.text = questionJson[i].start;
                 questionStartText = questionJson[i].start;
 
             }
@@ -227,6 +334,7 @@ public class TextBoxManager : MonoBehaviour {
 
 	public void onWordClick(string word) {
         wordBank.DisableWordBank();
+
 		for (int i = 0; i < questionJson.Count; i++)
     	{
     		if (questionJson[i].name == npcName)
@@ -247,17 +355,28 @@ public class TextBoxManager : MonoBehaviour {
                         questionJson[i].contra.TryGetValue(word, out text);
                         for (int j = 0; j < text.Count; j++)
                         {
-                            questionLines.Add(text[j]);
+                            List<string> stringsToAdd = SplitStrings(text[j]);
+                            for (int k = 0; k < stringsToAdd.Count; k++)
+                            {
+                                questionLines.Add(stringsToAdd[k]);
+                            }
                         }
                     }
                     contraDictIndex++;
                 }
 
                 //number of contradictory words == the place in the contradiction chain
-                if(questionJson[i].contra.Count==placeInChain)
+                if((questionJson[i].contra.Count==placeInChain&&placeInChain!=0))
                 {
-                    Debug.Log("THAT'S NEXT LEVEL!");
-                    nextLevelText.StartCoroutine("Appear");
+                    if (currentLevel == 0)
+                    {
+                        Debug.Log("THAT'S NEXT LEVEL!");
+                        currentLevel++;
+                        listenJson = listenJsonParser.parseLevelJson("levelTwo");
+                        questionJson = questionJsonParser.parseLevelJson("levelTwo");
+
+                    }
+                    totalContradictions++;
                 }
 
                 if (questionLines.Count == 0)
@@ -267,7 +386,11 @@ public class TextBoxManager : MonoBehaviour {
                         placeInChain = 0;
                         for (int j = 0; j < text.Count; j++)
                         {
-                            questionLines.Add(text[j]);
+                            List<string> stringsToAdd = SplitStrings(text[j]);
+                            for (int k = 0; k < stringsToAdd.Count; k++)
+                            {
+                                questionLines.Add(stringsToAdd[k]);
+                            }
                         }
                     }
                     else
@@ -282,7 +405,9 @@ public class TextBoxManager : MonoBehaviour {
 		}
 		endAtLine = questionLines.Count - 1;
 		currentLine = 0;
-        screenText.text = questionLines[currentLine];
+        StartCoroutine("TypeText", questionLines[currentLine]);
+
+        //screenText.text = questionLines[currentLine];
 		isClicked = true;
 		stopPlayerMovement = true;
 		questionClick = true;
@@ -334,5 +459,143 @@ public class TextBoxManager : MonoBehaviour {
         playerHistory = FindObjectOfType<PlayerHistory>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerMovement.frozen = false;
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (prevScene == 1)
+            {
+                playerMovement.gameObject.transform.parent.position = tentExitPositions[0].position;
+            }
+            if (prevScene == 2)
+            {
+                playerMovement.gameObject.transform.parent.position = tentExitPositions[1].position;
+            }
+            if (prevScene == 3)
+            {
+                playerMovement.gameObject.transform.parent.position = tentExitPositions[2].position;
+            }
+            if (prevScene == 4)
+            {
+                playerMovement.gameObject.transform.parent.position = tentExitPositions[3].position;
+            }
+            if (prevScene == 5)
+            {
+                playerMovement.gameObject.transform.parent.position = tentExitPositions[4].position;
+            }
+        }
+    }
+
+    public IEnumerator TypeText(string input)
+    {
+        if (scrollingTextDone)
+        {
+
+            screenText.text = "";
+            scrollingTextDone = false;
+            bool rich=false;
+            string letter = "";
+            string total="";
+            int count=0;
+            for (int i=0;i<input.Length;i++)
+            {
+                letter = input[i] + "";
+                if(letter=="<")
+                {
+                    rich = true;
+                    total+=letter;
+                }
+                else if(rich&&letter != ">")
+                {
+                    total += letter;
+                }
+                else if(rich && letter == ">")
+                {
+                    total += letter;
+                    count++;
+                    if (count == 2)
+                    {
+                        screenText.text = total;
+                        rich = false;
+                        total = "";
+                    }
+                }
+                else
+                {
+                    screenText.text += letter;
+                }
+
+                if(rich)
+                {
+                    yield return new WaitForEndOfFrame();
+                }
+                else
+                    yield return new WaitForSeconds(.001f);
+
+            }
+
+            scrollingTextDone = true;
+        }
+        else
+        {
+            screenText.text = input;
+            scrollingTextDone = true;
+            StopAllCoroutines();
+            yield return new WaitForSeconds(.001f);
+        }
+    }
+
+    public List<string> SplitStrings(string toSplit)
+    {
+
+        List<string> allStrings=new List<string>();
+        string tempString;
+
+        if(CalculateLengthOfMessage(toSplit)[0]<=1800)
+        {
+            allStrings.Add(toSplit);
+            return allStrings;
+        }
+        int start = 0;
+        int end = CalculateLengthOfMessage(toSplit)[1];
+        while(toSplit[end]+""!=" ")
+        {
+            end--;
+        }
+        tempString = toSplit.Substring(start, end)+ "–";
+        allStrings.Add(tempString);
+        tempString = "–"+ toSplit.Substring(end, toSplit.Length-end);
+        allStrings.Add(tempString);
+        return allStrings;
+
+    }
+
+
+    int[] CalculateLengthOfMessage(string message)
+    {
+        int[] lengthThenSplitSpot = new int[2];
+        int totalLength = 0;
+        Font myFont = screenText.font;  //chatText is my Text component
+        CharacterInfo characterInfo = new CharacterInfo();
+
+        char[] arr = message.ToCharArray();
+        int count = 0;
+        foreach (char c in arr)
+        {
+            myFont.RequestCharactersInTexture(message, 18);
+
+            myFont.GetCharacterInfo(c, out characterInfo, 18);
+            totalLength += characterInfo.advance;
+            if (totalLength > 1800 && lengthThenSplitSpot[1] == 0)
+            {
+                lengthThenSplitSpot[1] = count;
+            }
+            count++;
+        }
+        lengthThenSplitSpot[0] = totalLength;
+        return lengthThenSplitSpot;
+    }
+    public void LoadFinalScene()
+    {
+        SceneManager.LoadScene(6);
     }
 }
+

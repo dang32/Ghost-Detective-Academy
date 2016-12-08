@@ -21,10 +21,10 @@ TagManager:
   - Static
   - smokeCollider
   - player
-  - 
-  - 
-  - 
-  - 
+  - terrain
+  - splashes
+  - camera
+  - camera collision
   - 
   - 
   - 

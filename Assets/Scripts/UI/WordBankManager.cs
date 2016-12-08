@@ -51,6 +51,8 @@ public class WordBankManager : MonoBehaviour {
 	public void EnableWordBank(){
 		wordBank.SetActive(true);
         wordBankActive = true;
+        if(gameObject.GetComponent<CanvasGroup>()!=null)
+        gameObject.GetComponent<CanvasGroup>().interactable = true;
 		//noteButton.SetActive(false);
 		noteButtonActive = false;
 	}
@@ -58,8 +60,16 @@ public class WordBankManager : MonoBehaviour {
 	public void DisableWordBank(){
 		wordBank.SetActive(false);
         //wordBankActive = false;
-		//noteButton.SetActive(true);
+        //noteButton.SetActive(true);
+        hideNotepadButton.SetActive(false);
         noteButtonActive = true;
+    }
+
+    public void DisableWordBankFinal()
+    {
+        wordBank.SetActive(false);
+        //wordBankActive = false;
+        //noteButton.SetActive(true);
     }
 
     public void AddWordsToBank()

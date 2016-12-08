@@ -5,10 +5,13 @@ using System.Collections;
 
 public class EvidenceText : MonoBehaviour {
     public float appearDuration;
+    public Image evidenceImage;
     Text evidenceAppearText;
+    public string[] evidenceDescriptions;
+    public Sprite[] imagesOfEvidence;
 	// Use this for initialization
 	void Start () {
-        evidenceAppearText = GetComponent<Text>();
+        evidenceAppearText = transform.GetChild(3).gameObject.GetComponent<Text>();
 
     }
 	
@@ -17,22 +20,21 @@ public class EvidenceText : MonoBehaviour {
 	
 	}
 
-    public IEnumerator Appear(int evidenceIndex)
+    public void Appear(int index)
     {
-       
-        float elapsedTime = 0;
-
-        while (elapsedTime < appearDuration)
+        Debug.Log("evidence appear");
+        evidenceAppearText.text = evidenceDescriptions[index];
+        evidenceImage.sprite = imagesOfEvidence[index];
+       for (int i=0;i<transform.childCount;i++)
         {
-            evidenceAppearText.enabled = true;
-            transform.GetChild(0).gameObject.SetActive(true);
-
-            elapsedTime += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            transform.GetChild(i).gameObject.SetActive(true);
         }
-        evidenceAppearText.enabled = false;
-        transform.GetChild(0).gameObject.SetActive(false);
-
-
+    }
+    public void Disappear()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 }
